@@ -5,6 +5,9 @@ html {
     margin: 0;
     padding: 0;
     font-size: 10px;
+    --primery-color: rgb(176, 57, 231);
+    --secondry-color: rgb(143, 252, 252);
+
 }
 
 *,
@@ -21,36 +24,48 @@ body {
 /* text styling */
 
 h1 {
-    font-size: 4rem;
+   margin: auto;
+    font-size: 3.5rem;
     color: #fff;
+    padding: auto;
 }
 
 h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 p {
     font-size: 1.6rem;
+    line-height: 1.6;
 }
 
 /* Background  */
 
 header {
+    text-align: center;
     width: 100%;
     height: 150px;
-    background-color: rgb(84, 23, 141);
+    background-color: var(--primery-color);
+    padding: 40px 0;
 }
 
 /* flex layout */
 section {
     display: flex;
-    flex-wrap: wrap; 
+    /*Here we see that the children are indeed breaking out of their container. One way in which you can fix this is to add the following declaration to your <section> rule:*/
+    flex-wrap: wrap;
 }
 
 article {
-    background-color: rgb(0, 255, 255);
+    background-color: var(--secondry-color);
+    /*Also, add the following declaration to your <article> rule:*/
     flex: 200px;
+    /*The flex: 200px declaration set on the articles means that each will be at least 200px wide.*/
+    flex: 1 200px;
     margin: 5px;
     padding: 10px;
 }
 
+article:nth-of-type(3) {
+    flex: 2 200px;
+}
