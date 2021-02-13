@@ -1,4 +1,4 @@
-# St-Huxley-s-Community-College
+# Carlyon Community School
 
 Mdn HTML lessons: Understanding of all the text styling techniques;
 
